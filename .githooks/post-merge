@@ -1,0 +1,33 @@
+#!/bin/zsh
+# git hook to run a command after `git pull` if a specified file was changed
+# monrepo idea from https://dev.to/zirkelc/automatically-install-npm-dependencies-on-git-pull-bg0
+
+# ### This works in Monorepos w/o workspaces setup
+# check_run() {
+#   PACKAGES=($(git diff --name-only HEAD@{1} HEAD | grep -E "$1" ))
+
+#   if [[ ${PACKAGES[@]} ]]; then
+#     for package in $PACKAGES; do
+#       echo '---'
+#       echo "📦 $package changed. Running '$2' to update your dependencies..."
+#       (cd $(dirname $package) && eval "$2")
+#     done
+#   fi
+# }
+
+### This runs cmd from project root
+check_run() {
+  PACKAGES=($(git diff --name-only HEAD@{1} HEAD | grep -E "$1" ))
+
+  if [[ ${PACKAGES[@]} ]]; then
+    echo '---'
+    echo "📦 $package changed. Running '$2' to update your dependencies..."
+    eval "$2"
+  fi
+}
+
+# check & install dependencies on change
+check_run yarn\.lock "yarn install"
+check_run pnpm-lock\.yaml "pnpm install"
+check_run package-lock\.json "npm install"
+check_run composer\.lock "composer install"
