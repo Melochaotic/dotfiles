@@ -19,10 +19,12 @@ dt () {
 dta () { dt add "$@" }
 dtc () { dt commit "$@" }
 alias dtst="dt status"
+alias dtp="dt push"
 
 # Supabase
 alias sb="supabase"
 alias sbs="supabase start"
+alias sbst="supabase status"
 alias sbsa="sba \"supabase start\""
 alias sbt="supabase db test"
 alias sbr="supabase db reset"
