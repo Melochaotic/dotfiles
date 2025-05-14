@@ -1,0 +1,51 @@
+CODE=$HOME/code
+
+alias pn=pnpm
+alias server:start="pas || npmrd"
+
+# Laravel
+alias spine-update="composer update taxassistuk/laravel-spine"
+alias spinal-tap="spine-update"
+alias pai="php artisan db:import"
+
+# Git
+# alias gdone="g dev && gl && gbD $1 && git push -d origin $1"
+alias lg="lazygit"
+
+# dotfiles repo
+dt () {
+  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
+}
+dta () { dt add "$@" }
+dtc () { dt commit "$@" }
+alias dtst="dt status"
+
+# Supabase
+alias sb="supabase"
+alias sbs="supabase start"
+alias sbsa="sba \"supabase start\""
+alias sbt="supabase db test"
+alias sbr="supabase db reset"
+sba() {
+  find $CODE -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && $1" \;
+}
+sbu() {
+  sba "supabase stop --no-backup"
+  brew upgrade supabase
+  sbsa
+}
+sbm() { # create migration
+  name=$1
+  if [[ -z $name ]] then
+    name=`git rev-parse --abbrev-ref HEAD`
+  fi
+  name=$(echo $name | tr '-' '_')
+  supabase db diff -f $name
+}
+
+# Turbo
+alias tu="npx turbo"
+alias tud="npx turbo dev"
+alias tut="npx turbo run test"
+alias tutb="npx turbo run test:browser"
+alias tudbr="npx turbo db:reset"
