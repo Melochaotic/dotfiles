@@ -5,7 +5,7 @@ format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 unknown_symbol = "❓ "
 empty_symbol = "❗ "
 full_symbol = '🔋 '
-charging_symbol = '⚡️'
+charging_symbol = '⚡️ '
 discharging_symbol = '💀 '
 
 [[battery.display]]

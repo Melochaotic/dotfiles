@@ -5,6 +5,7 @@
 	gpgSign = true
 [core]
 	editor = nvim
+	hooksPath = ~/.githooks
 [alias]
 	amend = commit --amend --no-edit
 	commitDiff = log --left-right --graph --cherry-pick --oneline
