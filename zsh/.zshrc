@@ -81,6 +81,7 @@ plugins=(
   npm
   nvm
   laravel
+  ubuntu
   starship
   zsh-autosuggestions
   zsh-syntax-highlighting
