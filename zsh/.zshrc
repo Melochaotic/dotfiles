@@ -147,7 +147,7 @@ load-nvmrc
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 autoload -U compinit; compinit
-. "$HOME/.deno/env"
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
