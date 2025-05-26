@@ -28,7 +28,7 @@ brew install stow
 Finally generate all the symlinks:
 
 ```zsh
-stow *
+stow /*
 ```
 
 ...or just generate the ones you need:
@@ -36,6 +36,12 @@ stow *
 ```zsh
 stow zsh starship git
 ```
+
+> [!CAUTION]
+> In case of conflicts you can add the `--adopt` flag
+> to overwrite files in the stow directory
+>
+> You can then manually manage these before pushing to github
 
 ### Git setup
 
