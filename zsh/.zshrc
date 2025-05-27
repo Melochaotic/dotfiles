@@ -164,7 +164,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
