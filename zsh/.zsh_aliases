@@ -14,15 +14,9 @@ alias lg="lazygit"
 
 # dotfiles repo
 DOT="$HOME/dotfiles"
-dt () {
-  git -C "$DOT" "$@"
-}
-dta () {
-  dt add "$@"
-}
-dtc () {
-  dt commit "$@"
-}
+alias dt='f() { git -C "$DOT" "$@" }; f'
+alias dta='f() { dt add "$@" }; f'
+alias dtc='f() { dt commit "$@" }; f'
 alias dtst="dt status"
 alias dtp="dt push"
 alias dtl="dt pull"
