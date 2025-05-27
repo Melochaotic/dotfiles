@@ -28,7 +28,7 @@ brew install stow
 Finally generate all the symlinks:
 
 ```zsh
-stow /*
+stow */
 ```
 
 ...or just generate the ones you need:
