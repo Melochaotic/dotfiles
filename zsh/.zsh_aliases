@@ -17,6 +17,7 @@ DOT="$HOME/dotfiles"
 alias dt='f() { git -C "$DOT" "$@" }; f'
 alias dta='f() { dt add "$@" }; f'
 alias dtc='f() { dt commit "$@" }; f'
+alias dts='f() {( cd "$DOT" && stow */ "$@" )}; f'
 alias dtst="dt status"
 alias dtp="dt push"
 alias dtl="dt pull"
