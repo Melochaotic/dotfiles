@@ -25,7 +25,9 @@ brew install stow
 
 ## Using
 
-Finally generate all the symlinks:
+### Symlinks
+
+Generate all the symlinks:
 
 ```zsh
 stow */
@@ -42,6 +44,14 @@ stow zsh starship git
 > to overwrite files in the stow directory
 >
 > You can then manually manage these before pushing to github
+
+### Init script
+
+run the init script in Linux/Mac to install required packages:
+
+```bash
+bash init.sh
+```
 
 ### Git setup
 
