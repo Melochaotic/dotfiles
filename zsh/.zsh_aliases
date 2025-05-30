@@ -1,11 +1,11 @@
-CODE=$HOME/code
+CODE_DIR=$HOME/code
 
 alias pn=pnpm
 alias server:start="pas || npmrd"
 
 # list of git projects
 lsprodir() {
-  find $CODE -maxdepth 2 -mindepth 2 -type d -print
+  find $CODE_DIR -maxdepth 2 -mindepth 2 -type d -print
 }
 
 # open git proj with VS Code using fzf
@@ -47,7 +47,7 @@ alias sbsa="sba \"supabase start\""
 alias sbt="supabase db test"
 alias sbr="supabase db reset"
 sba() {
-  find $CODE -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && $1" \;
+  find $CODE_DIR -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && $1" \;
 }
 sbu() {
   sba "supabase stop --no-backup"
