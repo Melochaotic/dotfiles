@@ -7,7 +7,16 @@
 brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install some brews
-brew install stow fzf zoxide gh nvim starship zellij gcc jesseduffield/lazygit/lazygit
+brew install \
+    fzf \
+    gcc \
+    gh \
+    jesseduffield/lazygit/lazygit\
+    nvim \
+    starship \
+    stow \
+    zellij \
+    zoxide
 
 # Install zsh plugins
 git clone git@github.com:grigorii-zander/zsh-npm-scripts-autocomplete.git ~/.oh-my-zsh/custom/plugins/zsh-npm-scripts-autocomplete
