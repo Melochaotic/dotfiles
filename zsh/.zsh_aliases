@@ -28,11 +28,11 @@ alias pai="php artisan db:import"
 alias lg="lazygit"
 
 # dotfiles repo
-DOT="$HOME/dotfiles"
-alias dt='f() { git -C "$DOT" "$@" }; f'
+DOT_DIR="$HOME/dotfiles"
+alias dt='f() { git -C "$DOT_DIR" "$@" }; f'
 alias dta='f() { dt add "$@" }; f'
 alias dtc='f() { dt commit "$@" }; f'
-alias dts='f() {( cd "$DOT" && stow */ "$@" )}; f'
+alias dts='f() {( cd "$DOT_DIR" && stow */ "$@" )}; f'
 alias dtst="dt status"
 alias dtp="dt push"
 alias dtl="dt pull"
