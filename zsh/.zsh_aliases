@@ -3,6 +3,21 @@ CODE=$HOME/code
 alias pn=pnpm
 alias server:start="pas || npmrd"
 
+# list of git projects
+lsprodir() {
+  find $CODE -maxdepth 2 -mindepth 2 -type d -print
+}
+
+# open git proj with VS Code using fzf
+cpro() {
+  PROJ_DIR=`lsprodir | fzf -1 -0 --query ${1:-''}`
+
+  if [[ $PROJ_DIR ]] then
+    echo "Opening $PROJ_DIR - Please wait..."
+    code $PROJ_DIR
+  fi
+}
+
 # Laravel
 alias spine-update="composer update taxassistuk/laravel-spine"
 alias spinal-tap="spine-update"
