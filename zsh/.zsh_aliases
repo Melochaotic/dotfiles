@@ -1,3 +1,4 @@
+# TODO: possibly make these overridable
 CODE_DIR=$HOME/code
 
 alias pn=pnpm
