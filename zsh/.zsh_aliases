@@ -6,12 +6,13 @@ alias pn=pnpm
 alias server:start="pas || npmrd"
 
 # list of git projects
-lsprodir() {
+code-project-ls() {
   find $CODE_DIR -maxdepth 2 -mindepth 2 -type d -print
 }
+alias lsprodir="code-project-ls"
 
 # open git proj with VS Code using fzf
-cpro() {
+code-project-open() {
   QUERY="$*"
   PROJ_DIR=`lsprodir | fzf -1 -0 --query ${QUERY:-''}`
 
@@ -20,6 +21,7 @@ cpro() {
     $CODE_EDITOR $PROJ_DIR
   fi
 }
+alias cpro="code-project-open"
 
 # Laravel
 alias spine-update="composer update taxassistuk/laravel-spine"
