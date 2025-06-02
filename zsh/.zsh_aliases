@@ -12,7 +12,8 @@ lsprodir() {
 
 # open git proj with VS Code using fzf
 cpro() {
-  PROJ_DIR=`lsprodir | fzf -1 -0 --query ${1:-''}`
+  QUERY="$*"
+  PROJ_DIR=`lsprodir | fzf -1 -0 --query ${QUERY:-''}`
 
   if [[ $PROJ_DIR ]] then
     echo "Opening $PROJ_DIR - Please wait..."
