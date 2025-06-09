@@ -48,11 +48,11 @@ alias dtcode="$CODE_EDITOR $DOT_DIR"
 alias sb="supabase"
 alias sbs="supabase start"
 alias sbst="supabase status"
-alias sbsa="sba \"supabase start\""
+alias sbsa="sba \"start\""
 alias sbt="supabase db test"
 alias sbr="supabase db reset"
 sba() {
-  find $CODE_DIR -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && $1" \;
+  find $CODE_DIR -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && supabase $1" \;
 }
 sbu() {
   sba "supabase stop --no-backup"
