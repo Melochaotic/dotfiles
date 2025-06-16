@@ -69,9 +69,9 @@ sbm() { # create migration
 }
 
 # Turbo
-alias tu="npx turbo"
-alias turd="npx turbo run dev"
-alias tut="npx turbo run test"
-alias tutu="npx turbo run test:unit"
-alias tutb="npx turbo run test:browser"
-alias tudbr="npx turbo db:reset"
+alias tu="turbo"
+alias turd="turbo run dev"
+alias tut="turbo run test"
+alias tutu="turbo run test:unit"
+alias tutb="turbo run test:browser"
+alias tudbr="turbo db:reset"
