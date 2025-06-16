@@ -168,3 +168,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+eval "$(zellij setup --generate-auto-start zsh)"
