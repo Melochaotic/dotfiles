@@ -145,7 +145,7 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(`brew --prefix`/bin/brew shellenv)"
 autoload -U compinit; compinit
 
 # Generated for envman. Do not edit.
@@ -156,13 +156,24 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
+  # ...
+elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
+  # Herd injected PHP binary.
+  export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
+  . "$HOME/.deno/env"
+
+  # Herd injected PHP 8.2 configuration.
+  export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
+  # Herd injected PHP 8.3 configuration.
+  export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi;
 
 eval "$(zoxide init --cmd cd zsh)"
 
