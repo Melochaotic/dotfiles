@@ -1,9 +1,5 @@
 # This is the configuration file for Ghostty.
 #
-# This template file has been automatically created at the following
-# path since Ghostty couldn't find any existing config files on your system:
-#
-#   /home/nicko/.config/ghostty/config
 #
 # The template does not set any default options, since Ghostty ships
 # with sensible defaults for all options. Users should only need to set
@@ -40,10 +36,11 @@
 # # Some config options have unique syntaxes for their value,
 # # which is explained in the docs for that config option.
 # # Just for example:
-# resize-overlay-duration = 4s 200ms
+# resize-overlay-duration = 4s
 
-# font-family = MesloLGS Nerd Font Mono
-# font-size = 19
-# background-opacity = 0.9
-# theme = catppuccin-mocha
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
 
+theme = catppuccin-mocha
+font-size = 16
