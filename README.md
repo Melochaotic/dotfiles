@@ -14,11 +14,13 @@ Install [GNU Stow](https://www.gnu.org/software/stow/manual/stow.html) using the
 ### Linux (Ubuntu)
 
 Looks like we can use Linuxbrew:
+
 ```zsh
 brew install stow
 ```
 
 Otherwise in ubuntu:
+
 ```zsh
 apt install stow
 ```
