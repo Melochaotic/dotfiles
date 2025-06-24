@@ -8,6 +8,7 @@ alias server:start="pas || npmrd"
 # list of git projects
 code-project-ls() {
   find $CODE_DIR -maxdepth 2 -mindepth 2 -type d -print
+  find $CODE_DIR -maxdepth 2 -type f -name "*.code-workspace" -print
   echo ~/dotfiles
 }
 alias lsprodir="code-project-ls"
