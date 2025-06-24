@@ -157,7 +157,13 @@ zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
-  # ...
+  # pnpm
+  export PNPM_HOME="/home/nicko/.local/share/pnpm"
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
+  # pnpm end
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
   # Herd injected PHP binary.
   export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
