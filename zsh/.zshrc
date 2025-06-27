@@ -10,8 +10,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-eval "$(zellij setup --generate-auto-start zsh)"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -90,6 +88,12 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Don't load zellij in VS Code terminal
+if [ 'node' != "$(basename "/"$(ps -o cmd -f -p $(cat /proc/$(echo $$)/stat | cut -d \  -f 4) | tail -1 | sed 's/ .*$//'))" ];
+then
+  eval "$(zellij setup --generate-auto-start zsh)"
+fi
 
 # User configuration
 
