@@ -90,8 +90,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Don't load zellij in VS Code terminal
-if [ 'node' != "$(basename "/"$(ps -o cmd -f -p $(cat /proc/$(echo $$)/stat | cut -d \  -f 4) | tail -1 | sed 's/ .*$//'))" ];
-then
+if [ 'vscode' != $TERM_PROGRAM ]; then
   eval "$(zellij setup --generate-auto-start zsh)"
 fi
 
