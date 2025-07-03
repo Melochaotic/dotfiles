@@ -27,6 +27,12 @@ git clone git@github.com:grigorii-zander/zsh-npm-scripts-autocomplete.git ~/.oh-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
+    echo 'No custom linux setup'
+elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
+    brew install --cask alt-tab
+fi;
+
 # Run stow
 stow */ --adopt
 
