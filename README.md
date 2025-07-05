@@ -57,15 +57,15 @@ stow zsh starship git
 
 run the init script in Linux/Mac to install required packages:
 
-```bash
-bash init.sh
+```zsh
+zsh init.sh
 ```
 
 ### Git setup
 
 After symlinks are setup you must copy the `.user.gitconfig.example` and fill in the empty settings:
 
-```bash
+```zsh
 cp ~/.user.gitconfig.example ~/.user.gitconfig
 nvim ~/.user.gitconfig
 ```
