@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # TODO: Install zsh & oh-my-zsh based on platform
 
