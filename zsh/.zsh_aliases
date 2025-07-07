@@ -2,6 +2,9 @@
 CODE_DIR=$HOME/code
 CODE_EDITOR='code'
 
+alias sz="source ~/.zshrc"
+alias sza="source ~/.zsh_aliases"
+
 alias pn=pnpm
 alias server:start="pas || npmrd"
 
