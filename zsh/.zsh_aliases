@@ -52,9 +52,9 @@ alias dtf="dtcode"
 
 # Supabase
 alias sb="supabase"
-alias sbs="supabase start"
+alias sbs="supabase start -x vector"
 alias sbst="supabase status"
-alias sbsa="sba \"start\""
+alias sbsa="sba \"start -x vector\""
 alias sbt="supabase db test"
 alias sbr="supabase db reset"
 sba() {
