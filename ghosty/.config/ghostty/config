@@ -44,4 +44,4 @@ keybind = alt+right=unbind
 
 theme = catppuccin-mocha
 # theme = "Operator Mono Dark"
-font-size = 15
+# font-size = 14
