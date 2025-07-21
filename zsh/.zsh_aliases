@@ -24,6 +24,8 @@ code-project-open() {
   if [[ $PROJ_DIR ]] then
     echo "Opening $PROJ_DIR - Please wait..."
     $CODE_EDITOR $PROJ_DIR
+  else
+    echo "ERROR: No Project found for query '$QUERY'"
   fi
 }
 alias cpro="code-project-open"
