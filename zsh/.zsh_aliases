@@ -56,11 +56,11 @@ alias dtf="dtcode"
 alias sb="supabase"
 alias sbs="supabase start -x vector"
 alias sbst="supabase status"
-alias sbsa="sba \"start -x vector\""
+alias sbsa="sba start -x vector"
 alias sbt="supabase db test"
 alias sbr="supabase db reset"
 sba() {
-  find $CODE_DIR -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && supabase $1" \;
+  find $CODE_DIR -maxdepth 3 -name "supabase" -type d -exec zsh -c "cd {} && supabase $*" \;
 }
 sbu() {
   sba "supabase stop --no-backup"
