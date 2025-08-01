@@ -31,8 +31,7 @@ code-project-open() {
 alias cpro="code-project-open"
 
 # Laravel
-alias spine-update="composer update taxassistuk/laravel-spine"
-alias spinal-tap="spine-update"
+alias spinal-tap="composer update taxassistuk/laravel-spine"
 alias pai="php artisan db:import"
 
 # Git
