@@ -1,0 +1,23 @@
+%YAML 1.3
+---
+- Key: [Mute Microphone, pressed]
+- KeyPress:
+  - XF86_AudioMicMute
+  - click
+...
+---
+- Key: [Snipping Tool, pressed]
+- Execute: [gnome-screenshot, --interactive]
+...
+---
+- Rule:
+  - Key: [Back Button, pressed]
+  - KeyPress:
+    - [Control_L, c]
+    - click
+- Rule:
+  - Key: [Forward Button, pressed]
+  - KeyPress:
+    - [Control_L, v]
+    - click
+...
