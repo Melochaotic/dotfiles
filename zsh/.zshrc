@@ -173,12 +173,16 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
   # Herd injected PHP binary.
   export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
-  . "$HOME/.deno/env"
+ . "$HOME/.deno/env"
 
   # Herd injected PHP 8.2 configuration.
   export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
   # Herd injected PHP 8.3 configuration.
   export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
+  # Herd injected PHP 8.4 configuration.
+  export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
+  # Herd injected PHP 8.5 configuration.
+  export HERD_PHP_85_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/85/"
 
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
