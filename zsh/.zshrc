@@ -170,6 +170,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
     *) export PATH="$PNPM_HOME:$PATH" ;;
   esac
   # pnpm end
+
+  export PATH=$HOME/.config/composer/vendor/bin:$PATH
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
   # Herd injected PHP binary.
   export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
