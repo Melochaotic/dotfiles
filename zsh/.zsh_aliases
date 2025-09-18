@@ -39,6 +39,7 @@ alias tinker="php artisan tinker"
 # Git
 # alias gdone="g dev && gl && gbD $1 && git push -d origin $1"
 alias lg="lazygit"
+alias appraisal-gen="git log --pretty=format:'* %s' --since="6 months" --committer="ruddock" --grep="Merge" --invert-grep"
 
 # dotfiles repo
 DOT_DIR="$HOME/dotfiles"
