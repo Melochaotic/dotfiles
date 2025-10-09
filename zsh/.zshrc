@@ -171,7 +171,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
   esac
   # pnpm end
 
-  export PATH=$HOME/.config/composer/vendor/bin:$PATH
   export PATH="$HOME/.config/herd-lite/bin:$PATH"
   export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
