@@ -2,7 +2,7 @@
 ---
 - Key: [Mute Microphone, pressed]
 - KeyPress:
-  - [Control_L, Shift_L, M]
+  - XF86_AudioMicMute
   - click
 ...
 ---
