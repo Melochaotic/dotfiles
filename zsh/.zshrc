@@ -86,6 +86,7 @@ plugins=(
   starship
   zsh-autosuggestions
   zsh-syntax-highlighting
+  fzf-tab # https://github.com/Aloxaf/fzf-tab?tab=readme-ov-file
 )
 
 source $ZSH/oh-my-zsh.sh
