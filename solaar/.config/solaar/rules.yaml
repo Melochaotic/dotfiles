@@ -1,5 +1,16 @@
 %YAML 1.3
 ---
+- Rule:
+  - Key: [Previous Fn, pressed]
+  - Execute: [playerctl, previous]
+- Rule:
+  - Key: [Play/Pause Fn, pressed]
+  - Execute: [playerctl, play-pause]
+- Rule:
+  - Key: [Next Fn, pressed]
+  - Execute: [playerctl, next]
+...
+---
 - Key: [Mute Microphone, pressed]
 - KeyPress:
   - XF86_AudioMicMute
