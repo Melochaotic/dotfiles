@@ -11,7 +11,7 @@ brew install \
     fzf \
     gcc \
     gh \
-    jesseduffield/lazygit/lazygit\
+    lazygit\
     nvim \
     starship \
     stow \
