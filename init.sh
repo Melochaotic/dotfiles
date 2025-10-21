@@ -18,7 +18,8 @@ brew install \
     zellij \
     zoxide \
     ripgrep \
-    fd
+    fd \
+    jq
 
 # Install zsh plugins
 git clone git@github.com:grigorii-zander/zsh-npm-scripts-autocomplete.git ~/.oh-my-zsh/custom/plugins/zsh-npm-scripts-autocomplete
