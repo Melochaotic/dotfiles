@@ -30,7 +30,7 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
     echo 'No custom linux setup'
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
-    brew install --cask alt-tab
+    brew install --cask alt-tab raycast
 fi;
 
 # Run stow
