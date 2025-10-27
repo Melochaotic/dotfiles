@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# TODO: Install zsh & oh-my-zsh based on platform
-
-
 # Install Homebrew if not already
 brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
