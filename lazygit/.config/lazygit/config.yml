@@ -1,5 +1,5 @@
 os:
-    shellFunctionsFile: ~/.zsh_aliases
+    shellFunctionsFile: ~/aliases.zsh
 gui:
     # Use the mocha catppuccin theme
     theme:

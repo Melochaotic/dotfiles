@@ -72,7 +72,7 @@ nvim ~/.user.gitconfig
 
 ## Repo aliases
 
-The `.zsh_aliases` file contains zsh like git aliases so you can easily commit & check changes anywhere. They use a `dt*` prefix instead of `g*`.
+The `aliases.zsh` file contains zsh like git aliases so you can easily commit & check changes anywhere. They use a `dt*` prefix instead of `g*`.
 
 ## Tips
 

@@ -120,7 +120,7 @@ fi
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-source $HOME/.zsh_aliases
+source $HOME/aliases.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
