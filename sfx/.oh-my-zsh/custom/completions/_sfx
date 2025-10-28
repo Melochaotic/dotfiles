@@ -1,0 +1,12 @@
+#compdef sfx
+
+_sfx() {
+  local state
+
+  _arguments \
+    '1: :->sound'
+
+  compadd "$@" `ls "$XDG_CONFIG_HOME/sfx/" | sed 's/\.[^.]*$//'`
+}
+
+_sfx "$@"

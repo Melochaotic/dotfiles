@@ -85,3 +85,13 @@ alias tut="turbo run test"
 alias tutu="turbo run test:unit"
 alias tutb="turbo run test:browser"
 alias tudbr="turbo db:reset"
+
+boop () {
+  local last="$?"
+  if [[ "$last" == '0' ]]; then
+    sfx good
+  else
+    sfx bad
+  fi
+  $(exit "$last")
+}
