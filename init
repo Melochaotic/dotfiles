@@ -8,6 +8,7 @@ brew install \
     fzf \
     gcc \
     gh \
+    gitmoji \
     lazygit\
     nvim \
     starship \
