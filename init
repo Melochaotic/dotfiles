@@ -5,21 +5,21 @@ brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew
 
 # install some brews
 brew install \
+    fd \
     fzf \
     gcc \
     gh \
     gitmoji \
+    httpie \
+    jq \
     lazygit\
+    mpv \
     nvim \
+    ripgrep \
     starship \
     stow \
     zellij \
-    zoxide \
-    ripgrep \
-    fd \
-    jq \
-    mpv \
-    httpie
+    zoxide
 
 # Install zsh plugins
 git clone git@github.com:grigorii-zander/zsh-npm-scripts-autocomplete.git ~/.oh-my-zsh/custom/plugins/zsh-npm-scripts-autocomplete
