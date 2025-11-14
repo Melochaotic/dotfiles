@@ -47,6 +47,7 @@ alias dt='f() { git -C "$DOT_DIR" "$@" }; f'
 alias dta='f() { dt add "$@" }; f'
 alias dtc='f() { dt commit "$@" }; f'
 alias dts='f() {( cd "$DOT_DIR" && stow */ "$@" )}; f'
+alias dti='f() {( zsh "$DOT_DIR/init" )}; f'
 alias dtst="dt status"
 alias dtp="dt push"
 alias dtl="dt pull"
