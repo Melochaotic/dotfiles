@@ -58,7 +58,7 @@ stow zsh starship git
 run the init script in Linux/Mac to install required packages:
 
 ```zsh
-zsh init.sh
+zsh init
 ```
 
 ### Git setup
