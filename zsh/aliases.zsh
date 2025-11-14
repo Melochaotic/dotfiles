@@ -33,7 +33,7 @@ alias cpro="code-project-open"
 # Laravel
 alias spinal-tap="composer update taxassistuk/laravel-spine"
 alias pa="php artisan"
-alias pai="php artisan db:import"
+alias pai="(cd gcs && php artisan db:import)"
 alias tinker="php artisan tinker"
 
 # Git
