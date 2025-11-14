@@ -199,3 +199,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+# ripgrep completions - https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#complete
+source <(rg --generate complete-zsh)
