@@ -90,6 +90,18 @@ alias tut="turbo run test"
 alias tutu="turbo run test:unit"
 alias tutb="turbo run test:browser"
 alias tudbr="turbo db:reset"
+alias tudbs="turbo db:seed"
+alias tudbm="turbo db:migrate"
+tudbg() { # generate migration
+  name=$1
+  if [[ -z $name ]] then
+    name=`git rev-parse --abbrev-ref HEAD`
+  fi
+  name=$(echo $name | tr '-' '_')
+
+  turbo db:generate -- $name && turbo db:seed
+}
+
 
 boop () {
   local last="$?"
