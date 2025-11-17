@@ -55,6 +55,10 @@ alias dtlol="dt log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias dtcode="$CODE_EDITOR $DOT_DIR"
 alias dtf="dtcode"
 
+# NVIM
+alias vi=nvim
+alias vim=nvim
+
 # Supabase
 alias sb="supabase"
 alias sbs="supabase start -x vector"
