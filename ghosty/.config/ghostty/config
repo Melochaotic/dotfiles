@@ -42,6 +42,9 @@ macos-option-as-alt = left
 keybind = alt+left=unbind
 keybind = alt+right=unbind
 
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = performable:ctrl+v=paste_from_clipboard
+
 theme = catppuccin-mocha
 # theme = "Operator Mono Dark"
 font-size = 14
