@@ -1,13 +1,13 @@
 %YAML 1.3
 ---
 - Rule:
-  - Key: [Previous Fn, pressed]
+  - Key: [Previous Track, pressed]
   - Execute: [playerctl, previous]
 - Rule:
-  - Key: [Play/Pause Fn, pressed]
+  - Key: [Play/Pause, pressed]
   - Execute: [playerctl, play-pause]
 - Rule:
-  - Key: [Next Fn, pressed]
+  - Key: [Next Track, pressed]
   - Execute: [playerctl, next]
 ...
 ---
@@ -17,7 +17,7 @@
   - click
 ...
 ---
-- Key: [Snipping Tool, pressed]
+- Key: [Screen Capture, pressed]
 - Execute: [gnome-screenshot, --interactive]
 ...
 ---
