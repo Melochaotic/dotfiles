@@ -43,15 +43,13 @@ alias appraisal-gen="git log --pretty=format:'* %s' --since="6 months" --committ
 
 # dotfiles repo
 DOT_DIR="$HOME/dotfiles"
-alias dt='f() { git -C "$DOT_DIR" "$@" }; f'
-alias dta='f() { dt add "$@" }; f'
-alias dtc='f() { dt commit "$@" }; f'
+alias dt='f() {( cd "$DOT_DIR" && eval "$@" )}; f'
 alias dts='f() {( cd "$DOT_DIR" && stow */ "$@" )}; f'
 alias dti='f() {( zsh "$DOT_DIR/init" )}; f'
-alias dtst="dt status"
-alias dtp="dt push"
-alias dtl="dt pull"
-alias dtlol="dt log --graph --pretty=\"%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\""
+alias dtst="dt gst"
+alias dtp="dt gp"
+alias dtl="dt gl"
+alias dtlol="dt glol"
 alias dtcode="$CODE_EDITOR $DOT_DIR"
 alias dtf="dtcode"
 
