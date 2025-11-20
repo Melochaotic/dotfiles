@@ -1,5 +1,7 @@
 os:
     shellFunctionsFile: ~/aliases.zsh
+git:
+    overrideGpg: true
 customCommands:
     - command: git commit -m '{{ .Form.emoji }} {{ .Form.message }}'
       context: files
