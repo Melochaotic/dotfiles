@@ -2,6 +2,9 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# Add Emacs to path
+export PATH=~/.config/emacs/bin:$PATH
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
