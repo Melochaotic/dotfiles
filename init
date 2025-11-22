@@ -5,19 +5,26 @@ brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew
 
 # install some brews
 brew install \
+    7zip \
     fd \
     fzf \
+    ffmpeg \
     gcc \
     gh \
+    ghostscript \
     gitmoji \
     httpie \
+    imagemagick \
     jq \
     lazygit\
     mpv \
     nvim \
+    poppler \
+    resvg \
     ripgrep \
     starship \
     stow \
+    yazi \
     zellij \
     zoxide
 
