@@ -1,45 +1,45 @@
 os:
-    shellFunctionsFile: ~/aliases.zsh
+  shellFunctionsFile: ~/aliases.zsh
 git:
-    overrideGpg: true
+  overrideGpg: true
 customCommands:
-    - command: git commit -m '{{ .Form.emoji }} {{ .Form.message }}'
-      context: files
-      description: Commit changes using gitmojis
-      key: C
-      prompts:
-          - command: gitmoji -l
-            filter: ^(.*?) - (:.*?:) - (.*)$
-            key: emoji
-            labelFormat: "{{ .group_1 }} {{ .group_2 }} - {{ .group_3 }}"
-            title: "Select a gitmoji:"
-            type: menuFromCommand
-            valueFormat: "{{ .group_1 }}"
-          - key: message
-            title: "Enter a commit message:"
-            type: input
+  - command: git commit -m '{{ .Form.emoji }} {{ .Form.message }}'
+    context: files
+    description: Commit changes using gitmojis
+    key: C
+    prompts:
+      - command: gitmoji -l
+        filter: ^(.*?) - (:.*?:) - (.*)$
+        key: emoji
+        labelFormat: "{{ .group_1 }} {{ .group_2 }} - {{ .group_3 }}"
+        title: "Select a gitmoji:"
+        type: menuFromCommand
+        valueFormat: "{{ .group_1 }}"
+      - key: message
+        title: "Enter a commit message:"
+        type: input
 gui:
-    # Use the mocha catppuccin theme
-    theme:
-        activeBorderColor:
-            - "#a6e3a1"
-            - bold
-        inactiveBorderColor:
-            - "#a6adc8"
-        optionsTextColor:
-            - "#89b4fa"
-        selectedLineBgColor:
-            - "#313244"
-        cherryPickedCommitBgColor:
-            - "#45475a"
-        cherryPickedCommitFgColor:
-            - "#a6e3a1"
-        unstagedChangesColor:
-            - "#f38ba8"
-        defaultFgColor:
-            - "#cdd6f4"
-        searchingActiveBorderColor:
-            - "#f9e2af"
+  # Use the mocha catppuccin green theme
+  theme:
+    activeBorderColor:
+      - "#a6e3a1"
+      - bold
+    inactiveBorderColor:
+      - "#a6adc8"
+    optionsTextColor:
+      - "#89b4fa"
+    selectedLineBgColor:
+      - "#313244"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#a6e3a1"
+    unstagedChangesColor:
+      - "#f38ba8"
+    defaultFgColor:
+      - "#cdd6f4"
+    searchingActiveBorderColor:
+      - "#f9e2af"
 
-    authorColors:
-        "*": "#b4befe"
+  authorColors:
+    "*": "#b4befe"
