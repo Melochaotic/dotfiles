@@ -6,6 +6,7 @@ brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew
 # install some brews
 brew install \
     7zip \
+    cheat \
     fd \
     fzf \
     ffmpeg \
