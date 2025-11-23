@@ -1,6 +1,6 @@
 # TODO: possibly make these overridable
-CODE_DIR=$HOME/code
-CODE_EDITOR='code'
+export CODE_DIR=$HOME/code
+export EDITOR='code'
 
 alias sz="source ~/.zshrc"
 alias sza="source ~/aliases.zsh"
@@ -23,7 +23,7 @@ code-project-open() {
 
   if [[ $PROJ_DIR ]] then
     echo "Opening $PROJ_DIR - Please wait..."
-    $CODE_EDITOR $PROJ_DIR
+    $EDITOR $PROJ_DIR
   else
     echo "ERROR: No Project found for query '$QUERY'"
   fi
@@ -50,7 +50,7 @@ alias dtst="dt gst"
 alias dtp="dt gp"
 alias dtl="dt gl"
 alias dtlol="dt glol"
-alias dtcode="$CODE_EDITOR $DOT_DIR"
+alias dtcode="$EDITOR $DOT_DIR"
 alias dtf="dtcode"
 
 # NVIM
