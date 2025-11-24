@@ -23,8 +23,8 @@ code-project-open() {
 
   if [[ $PROJ_DIR ]] then
     echo "Opening $PROJ_DIR - Please wait..."
-    $EDITOR $PROJ_DIR
     cd $PROJ_DIR
+    $EDITOR .
   else
     echo "ERROR: No Project found for query '$QUERY'"
   fi
