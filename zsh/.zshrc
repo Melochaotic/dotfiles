@@ -166,6 +166,8 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
+for f in $HOME/.zsh-custom/**/*.zsh; do source "$f"; done
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
   # pnpm
   export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -208,7 +210,5 @@ fi;
 
 eval "$(zoxide init --cmd cd zsh)"
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
 # ripgrep completions - https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#complete
 source <(rg --generate complete-zsh)
