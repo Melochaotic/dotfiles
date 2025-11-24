@@ -1,0 +1,12 @@
+#compdef code-project-open
+
+_code-project-open() {
+  local state
+
+  _arguments \
+    '1: :->project'
+
+  compadd "$@" `code-project-ls | sed "s|${CODE_DIR}/||" | sed "s|${HOME}/||"`
+}
+
+_code-project-open "$@"
