@@ -1,6 +1,5 @@
 # TODO: possibly make these overridable
 export CODE_DIR=$HOME/code
-export EDITOR='code'
 
 alias sz="source ~/.zshrc"
 alias sza="source ~/aliases.zsh"
