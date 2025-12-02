@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Remove `nvm`
+rm -rf ~/.nvm
+
 # Install Homebrew if not already
 brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -8,8 +11,8 @@ brew install \
     7zip \
     cheat \
     fd \
-    fzf \
     ffmpeg \
+    fzf \
     gcc \
     gh \
     ghostscript \
@@ -48,11 +51,5 @@ stow */ --adopt
 if [ ! -f ~/.user.gitconfig ]; then
     cp -n ~/.user.gitconfig.example ~/.user.gitconfig && nvim ~/.user.gitconfig
 fi
-
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-source ~/.zshrc
-# nvm install --lts && nvm alias default lts/*
-nvm install 24 && nvm alias default 24
 
 npm install -g pnpm@latest-10
