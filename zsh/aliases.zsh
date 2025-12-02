@@ -50,7 +50,7 @@ alias dtst="dt gst"
 alias dtp="dt gp"
 alias dtl="dt gl"
 alias dtlol="dt glol"
-alias dtcode="$EDITOR $DOT_DIR"
+alias dtcode="$EDITOR $DOT_DIR && cd $DOT_DIR"
 alias dtf="dtcode"
 
 # NVIM
