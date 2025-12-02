@@ -1,7 +1,8 @@
 #!/bin/zsh
 
-# Remove `nvm`
+# Remove `nvm` & `pnpm`
 rm -rf ~/.nvm
+npm uninstall -g pnpm
 
 # Install Homebrew if not already
 brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -22,7 +23,9 @@ brew install \
     jq \
     lazygit\
     mpv \
+    node \
     nvim \
+    pnpm \
     poppler \
     resvg \
     ripgrep \
@@ -51,5 +54,3 @@ stow */ --adopt
 if [ ! -f ~/.user.gitconfig ]; then
     cp -n ~/.user.gitconfig.example ~/.user.gitconfig && nvim ~/.user.gitconfig
 fi
-
-npm install -g pnpm@latest-10

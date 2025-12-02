@@ -138,25 +138,9 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 for f in $HOME/.zsh-custom/**/*.zsh; do source "$f"; done
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
-  # pnpm
-  export PNPM_HOME="$HOME/.local/share/pnpm"
-  case ":$PATH:" in
-    *":$PNPM_HOME:"*) ;;
-    *) export PATH="$PNPM_HOME:$PATH" ;;
-  esac
-  # pnpm end
-
   export PATH="$HOME/.config/herd-lite/bin:$PATH"
   export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
-  # pnpm
-  export PNPM_HOME="$HOME/Library/pnpm"
-  case ":$PATH:" in
-    *":$PNPM_HOME:"*) ;;
-    *) export PATH="$PNPM_HOME:$PATH" ;;
-  esac
-  # pnpm end
-
   # Herd injected PHP binary.
   export PATH="$HOME/Library/Application Support/Herd/bin/":$PATH
  . "$HOME/.deno/env"
