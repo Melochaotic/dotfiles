@@ -44,8 +44,8 @@ alias appraisal-gen="git log --pretty=format:'* %s' --since="6 months" --committ
 # dotfiles repo
 DOT_DIR="$HOME/dotfiles"
 alias dt='f() {( cd "$DOT_DIR" && eval "$@" )}; f'
-alias dts='f() {( cd "$DOT_DIR" && stow */ "$@" )}; f'
-alias dti='f() {( zsh "$DOT_DIR/init" )}; f'
+alias dts='f() {( dt stow */ "$@" )}; f'
+alias dti='dt zsh "$DOT_DIR/init"'
 alias dtst="dt gst"
 alias dtp="dt gp"
 alias dtl="dt gl"
