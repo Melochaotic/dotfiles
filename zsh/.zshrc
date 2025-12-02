@@ -98,6 +98,8 @@ plugins=(
   fzf-tab # https://github.com/Aloxaf/fzf-tab?tab=readme-ov-file
 )
 
+eval "$(`brew --prefix`/bin/brew shellenv)"
+# oh-my-zsh autoloads completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 source $ZSH/oh-my-zsh.sh
 
 # # Don't load zellij in VS Code terminal
@@ -124,9 +126,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 source $HOME/aliases.zsh
 
-eval "$(`brew --prefix`/bin/brew shellenv)"
-autoload -U compinit; compinit
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
@@ -134,8 +133,6 @@ zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
-
-for f in $HOME/.zsh-custom/**/*.zsh; do source "$f"; done
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
   export PATH="$HOME/.config/herd-lite/bin:$PATH"
