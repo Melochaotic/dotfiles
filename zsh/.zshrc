@@ -159,6 +159,3 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
 fi;
 
 eval "$(zoxide init --cmd cd zsh)"
-
-# ripgrep completions - https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#complete
-source <(rg --generate complete-zsh)
