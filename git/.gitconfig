@@ -88,4 +88,4 @@
 
 [include]
 	# Local user overrides
-	path = .user.gitconfig
+	path = ~/.user.gitconfig
