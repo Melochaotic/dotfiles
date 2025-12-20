@@ -98,7 +98,11 @@ plugins=(
   fzf-tab # https://github.com/Aloxaf/fzf-tab?tab=readme-ov-file
 )
 
-eval "$(`brew --prefix`/bin/brew shellenv)"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then # WSL/Linux only
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi;
 # oh-my-zsh autoloads completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 source $ZSH/oh-my-zsh.sh
 
