@@ -160,6 +160,15 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then # MacOS only
   export ANDROID_HOME=$HOME/Library/Android/sdk
   export PATH=$PATH:$ANDROID_HOME/emulator
   export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+  export PNPM_HOME=$HOME/Library/pnpm
 fi;
+
+# pnpm
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 eval "$(zoxide init --cmd cd zsh)"
