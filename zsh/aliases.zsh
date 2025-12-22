@@ -5,6 +5,7 @@ alias sz="source ~/.zshrc"
 alias sza="source ~/aliases.zsh"
 
 alias pn=pnpm
+alias pnx=pnpx
 alias server:start="pas || npmrd"
 
 # list of git projects
