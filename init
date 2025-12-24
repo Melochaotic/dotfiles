@@ -1,8 +1,7 @@
 #!/bin/zsh
 
-# Remove `nvm` & `pnpm`
+# Remove `nvm`
 rm -rf ~/.nvm
-npm uninstall -g pnpm
 
 # Install Homebrew if not already
 brew -v || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -25,7 +24,6 @@ brew install \
     mpv \
     node \
     nvim \
-    pnpm \
     poppler \
     resvg \
     ripgrep \
